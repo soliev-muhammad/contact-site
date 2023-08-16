@@ -130,25 +130,18 @@
             contactCard.classList.toggle('light-mode');
         }
 
-        // Function to copy text using temporary input element
-        function copyToClipboard(text) {
-            const tempInput = document.createElement('input');
-            tempInput.value = text;
-            document.body.appendChild(tempInput);
-            tempInput.select();
-            document.execCommand('copy');
-            document.body.removeChild(tempInput);
-            alert("Copied to clipboard!");
-        }
-
         // Function to copy email address
         function copyEmail() {
-            copyToClipboard("solievsd@gmail.com"); // Replace with your actual email
+            const email = "solievsd@gmail.com"; // Replace with your actual email
+            navigator.clipboard.writeText(email);
+            alert("Email ' solievsd@gmail.com ' copied to clipboard!");
         }
 
         // Function to copy mobile number
         function copyMobileNumber() {
-            copyToClipboard("+1234567890"); // Replace with your actual mobile number
+            const mobileNumber = "+37122466161"; // Replace with your actual mobile number
+            navigator.clipboard.writeText(mobileNumber);
+            alert("Mobile number copied to clipboard!");
         }
     </script>
 </head>
