@@ -130,18 +130,25 @@
             contactCard.classList.toggle('light-mode');
         }
 
+        // Function to copy text using temporary input element
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert("Copied to clipboard!");
+        }
+
         // Function to copy email address
         function copyEmail() {
-            const email = "solievsd@gmail.com"; 
-            navigator.clipboard.writeText(email);
-            alert("Email ' solievsd@gmail.com ' copied to clipboard!");
+            copyToClipboard("solievsd@gmail.com"); 
         }
 
         // Function to copy mobile number
         function copyMobileNumber() {
-            const mobileNumber = "+37122466161"; 
-            navigator.clipboard.writeText(mobileNumber);
-            alert("Mobile number copied to clipboard!");
+            copyToClipboard("+37122466161"); 
         }
     </script>
 </head>
@@ -154,7 +161,7 @@
         <h1>Saidmuhammad Soliev</h1>
         <div class="contact-me-title">contact me via</div>
         <div class="contact-links">
-            <a class="contact-link" href="javascript:void(0)" onclick="copyEmail()"><i class="fas fa-envelope"></i> Email</a>
+            <a class="contact-link" href="javascript:void(0)" onclick="copyEmail()"><i class="fas fa-envelope"></i> solievsd@gmail.com</a>
             <a class="contact-link" href="https://cutt.ly/ewgOS1gt" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
             <a class="contact-link" href="https://cutt.ly/hwgOSGsO" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a class="contact-link" href="https://cutt.ly/qwgODu2l" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
