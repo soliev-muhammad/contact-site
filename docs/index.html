@@ -65,7 +65,7 @@
             border-radius: 50%;
             margin: 0 auto 10px;
             background-color: #ccc;
-            background-image: url('me.jpg'); 
+            background-image: url('me.jpg'); /* Replace with actual path */
             background-size: cover;
             background-position: center;
         }
@@ -76,9 +76,8 @@
         }
 
         .contact-me-title {
-            font-size: 15px;
+            font-size: 18px;
             margin-bottom: 10px;
-            font-family: 'Franklin Gothic Light', 'Arial Narrow', Arial, sans-serif;
         }
 
         .contact-links {
@@ -144,12 +143,13 @@
 
         // Function to copy email address
         function copyEmail() {
-            copyToClipboard("solievsd@gmail.com"); 
+            copyToClipboard("solievsd@gmail.com"); // Replace with your actual email
         }
 
-        // Function to copy mobile number
-        function copyMobileNumber() {
-            copyToClipboard("+37122466161"); 
+        // Function to call mobile number
+        function callMobileNumber() {
+            const mobileNumber = "+37122466161"; // Replace with your actual mobile number
+            window.location.href = "tel:" + mobileNumber;
         }
     </script>
 </head>
@@ -159,10 +159,10 @@
     </button>
     <div class="contact-card light-mode">
         <div class="profile-photo"></div>
-        <h1 class="profile-name">Saidmuhammad Soliev</h1>
-        <div class="contact-me-title">CONTACT ME VIA</div>
+        <h1>Saidmuhammad Soliev</h1>
+        <div class="contact-me-title">contact me via</div>
         <div class="contact-links">
-            <a class="contact-link" href="javascript:void(0)" onclick="copyEmail()"><i class="fas fa-envelope"></i> solievsd@gmail.com</a>
+            <a class="contact-link" href="javascript:void(0)" onclick="copyEmail()"><i class="fas fa-envelope"></i> Email</a>
             <a class="contact-link" href="https://cutt.ly/ewgOS1gt" target="_blank"><i class="fab fa-twitter"></i> Twitter</a>
             <a class="contact-link" href="https://cutt.ly/hwgOSGsO" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
             <a class="contact-link" href="https://cutt.ly/qwgODu2l" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
@@ -171,6 +171,7 @@
             <a class="contact-link" href="https://cutt.ly/gwgJWouW" target="_blank"><i class="fab fa-telegram"></i> Telegram</a>
             <a class="contact-link" href="https://cutt.ly/rwgOD91b" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             <a class="contact-link" href="javascript:void(0)" onclick="copyMobileNumber()"><i class="fas fa-phone"></i> +371 22466161</a>
+            <a class="contact-link" href="https://cutt.ly/sewrXJOE" target="_blank"><i class="fab fa-doc"></i><b>CERTIFICATES</b></a>
         </div>
         <a class="download-cv" href="Saidmuhammad_Soliev.pdf" target="_blank" download>
             <i class="fas fa-download"></i> Download CV
@@ -178,6 +179,3 @@
     </div>
 </body>
 </html>
-
-
-
